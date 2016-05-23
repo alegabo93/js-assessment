@@ -14,15 +14,20 @@ exports.arraysAnswers = {
   },
 
   removeWithoutCopy: function(arr, item) {
-
+    while(arr.indexOf(item) > -1){
+      arr.splice(arr.indexOf(item), 1);
+    }
+    return arr;
   },
 
   append: function(arr, item) {
-
+    arr.push(item);
+    return arr;
   },
 
   truncate: function(arr) {
-
+    arr.pop();
+    return arr;
   },
 
   prepend: function(arr, item) {
